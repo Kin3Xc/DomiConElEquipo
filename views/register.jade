@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	h1 Registro
+	p Debes llenar todos los datos para registrarte.
+	form(method='post', action='/users/register', enctype='multipart/form-data')
+		.form-group
+			label Nombre
+			input.form-control(name='nombre', type='text', placeholder='Nombre Completo')
+		.form-group
+			label Email
+			input.form-control(name='email', type='email', placeholder='Email')
+		.form-group
+			label Usuario
+			input.form-control(name='username', type='text', placeholder='Usuario')
+		.form-group
+			label Contraseña
+			input.form-control(name='password', type='password', placeholder='Contraseña')
+		.form-group
+			label Confirmar Contraseña
+			input.form-control(name='password2', type='password', placeholder='Confirmar Contraseña')
+		.form-group
+			label Imagen de perfil
+			input.form-control(name='profileimage', type='file')
+		input.btn.btn-default(name='submit', type='submit', value='Registrarme')
