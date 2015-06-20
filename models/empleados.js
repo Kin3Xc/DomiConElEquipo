@@ -2,7 +2,7 @@
  var Schema = mongoose.Schema;
 
  var empleadosSchema = new Schema({
- 	nombre:String,
+ 	name:String,
  	edad:Number
  });
 

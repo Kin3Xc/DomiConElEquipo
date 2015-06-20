@@ -3,7 +3,7 @@ extends layout
 block content
 	h1 Ingresar
 	p Debes llenar todos los datos para Ingresar.
-	form(method='post', action='/users/register', enctype='multipart/form-data')
+	form(method='post', action='/users/login', enctype='multipart/form-data')
 		.form-group
 			label Usuario
 			input.form-control(name='username', type='text')

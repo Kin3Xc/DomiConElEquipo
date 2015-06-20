@@ -3,10 +3,14 @@ extends layout
 block content
 	h1 Registro
 	p Debes llenar todos los datos para registrarte.
+	ul.errors
+		if errors
+			each error, i in errors
+				li.alert.alert-danger #{error.msg}
 	form(method='post', action='/users/register', enctype='multipart/form-data')
 		.form-group
 			label Nombre
-			input.form-control(name='nombre', type='text', placeholder='Nombre Completo')
+			input.form-control(name='name', type='text', placeholder='Nombre Completo')
 		.form-group
 			label Email
 			input.form-control(name='email', type='email', placeholder='Email')

@@ -5,12 +5,14 @@ var logger = require('morgan');
 var expressValidator = require('express-validator');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var bcrypt = require('bcryptjs');
 var passport = require('passport'); 
 var LocalStrategy = require('passport-local').Strategy;
 var bodyParser = require('body-parser');
 var multer = require('multer');
 var flash = require('connect-flash');
 var db = require('./models/db.js');
+
 
 
 var fs = require('fs');
@@ -75,6 +77,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
 app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res);
+  next();
+});
+
+// defino local variable available en todas las rutas
+// para esconder menu si login y mostrar logout 
+app.get('*', function(req, res, next){
+  res.locals.user = req.user || null;
   next();
 });
 
