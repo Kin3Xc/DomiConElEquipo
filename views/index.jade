@@ -1,7 +1,53 @@
 extends layout
 
 block content
-  h1= title2
-  p Bienvenido al #{title2}
 
-  a(class='btn btn-success') boton verde
+    div(class="row" data-ng-controller="cotizadorController")
+        div(class="col-lg-4 col-md-4 col-sm-4 cotizar")
+            h1 {{saludo}}
+            h1 Cotizar Servicio
+            form(role="form")
+                div(class="form-group")
+                    label Origen: 
+                    input(class="form-control" type="text" name="origen" id="origen")
+
+                div(class="form-group")
+                    label Destino:
+                    input(class="form-control" type="text" name="destino" id="destino")
+                
+                div(class="form-group")
+                    button(class="btn btn-primary" type="submit" ng-click="mostrarInfo()") Cotizar
+                    button(class="btn btn-primary" type="reset") Limpiar        
+        div(class="col-lg-1 col-md-1 col-sm-1")
+           
+        div(class="col-lg-7 col-md-7 col-sm-7 mapa" id='map_canvas' ng-show="ver")
+            
+    
+        div(class="tabla" ng-show="ver")
+            table(class="table table-bordered")
+                tr
+                    td(class="contenedor")
+                        div(class="proveedor")
+                            img(class="foto-proveedor" src="/img/img-proveedores/foto.jpg", alt="Imagen proveedor")  
+                           
+                        div(class="resumen")
+                            p Empresa: Tus domicilios
+                            p Tiempo entrega: 60 Minutos
+                            p Precio: 
+                              span(class="label label-info") $20.000
+
+                        div(class="contacto")
+                            p Direccion: Calle 1 # 12 - 24
+                            p Tel: 1234567
+                            p Email: contacto@tudomisilio.com
+
+                        div(class="comprar")
+                            button(class="btn btn-success btn-lg") Pedir servicio
+
+
+
+
+
+
+
+

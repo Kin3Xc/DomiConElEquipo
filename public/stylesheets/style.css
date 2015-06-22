@@ -1,7 +1,7 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+  padding:50px;
 }
 
 a {
@@ -33,3 +33,64 @@ ul.error li{
 	background: #dff0d8;
 	border-color:#d6e9c6;
 }
+
+.cotizar{
+	background-color: #ecf0f1;
+	margin-top: 35px;
+	border: 2px #bdc3c7 dashed;
+	border-radius: 20px;
+	padding-left: 40px;
+	padding: 10px;
+}
+.mapa{
+	margin-top: 35px;
+	border: 1px #bdc3c7 dashed;
+	border-radius: 10px;
+	padding-left: 40px;
+	padding: 10px;
+	margin-bottom:20px;
+	height: 300px;
+}
+.btn{
+	margin-right: 10px;
+}
+nav{
+ color: #FFF;
+ background-color: red;
+}
+.navbar{
+	background-color: #2980b9;
+}
+.tabla{
+	margin-top: 20px;
+	padding: 0;
+}
+.foto-proveedor{
+	width: 200px;
+	height: 150px;
+	border-radius: 10px;
+}
+.contenedor div{
+	float: left;
+	margin-right: 20px;
+	font-size: 16px;
+}
+.resumen{
+	margin-top: 20px;
+}
+.contacto{
+	margin-top: 20px;
+}
+.comprar{
+	margin-top: 40px;
+	padding-left: 20px;
+}
+.foto-proveedor:hover{
+	opacity: 0.6;
+    filter: alpha(opacity=100);
+}
+
+
+
+
+

@@ -4,7 +4,9 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css')
+
+  body(ng-app="DomisilApp")
     nav.navbar.navbar-inverse.navbar-fixed-top
       .container
         .navbar-header
@@ -31,9 +33,13 @@ html
     .container
       !=messages()
       block content
+
+      script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js')
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
       script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
-    
+
+      script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true")
+      script(src='/javascripts/index.js')
 
 
 
